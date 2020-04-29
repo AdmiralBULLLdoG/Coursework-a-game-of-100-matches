@@ -1,8 +1,9 @@
-#ifndef CLT_H
-#define CLT_H
+#ifndef CLI_H
+#define CLI_H
+#include "game.h"
 
-void CLT_start(CodeUnits* code_units);
+void CLI_start();
 int take(CodeUnits* code_units);
-int winner(CodeUnits* code_units);
+void winner(CodeUnits* code_units);
 
 #endif

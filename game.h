@@ -2,15 +2,16 @@
 #define GAME_H
 
 typedef struct {
-    int match = 100;
-    char player_one[];
-    char player_two[];
-    int current_player = 0;
-    int mode = 0;
+    int match;
+    char* player_one;
+    char* player_two;
+    int current_player;
+    int mode;
 } CodeUnits;
 
-int start();
+void start();
 void step(int take, CodeUnits* code_units);
-void is_end(CodeUnits* code_units);
+int is_end(CodeUnits* code_units);
+CodeUnits* creates_game(int mode, char* p1, char* p2);
 
 #endif
