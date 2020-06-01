@@ -1,6 +1,6 @@
 #ifndef CLI_H
 #define CLI_H
-#include "game.h"
+#include "game_common.h"
 
 void CLI_start();
 int take(CodeUnits* code_units);

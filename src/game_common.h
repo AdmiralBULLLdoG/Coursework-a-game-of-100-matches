@@ -1,5 +1,5 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAME_COMMON_H
+#define GAME_COMMON_H
 
 typedef struct {
     int match;
@@ -9,7 +9,6 @@ typedef struct {
     int mode;
 } CodeUnits;
 
-void start();
 void step(int take, CodeUnits* code_units);
 int is_end(CodeUnits* code_units);
 CodeUnits* creates_game(int mode, char* p1, char* p2);

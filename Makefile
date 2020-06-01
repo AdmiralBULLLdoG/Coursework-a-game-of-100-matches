@@ -1,2 +1,32 @@
-all:
-	gcc -Wall -o rezult *c
+CC ?= gcc
+#Change CMOCK_DIR to real cmock path
+export CMOCK_DIR ?= /home/danil/CMock2/cmock/
+export BUILD_DIR ?= ./build
+export SRC_DIR ?= ./src
+export TEST_DIR ?= ./test
+export TEST_BUILD_DIR ?= ${BUILD_DIR}/test
+TEST_MAKEFILE = ${TEST_BUILD_DIR}/MakefileTestSupport
+OBJ ?= ${BUILD_DIR}/obj
+OBJ_DIR = ${OBJ}
+
+default: all
+
+all: setup main test run
+
+setup: clean
+	mkdir -p ${BUILD_DIR}
+	mkdir -p ${OBJ}
+	ruby ${CMOCK_DIR}scripts/create_makefile.rb
+
+clean:
+	rm -rf ${BUILD_DIR}
+
+main: setup
+	${CC} -Wall -o ${BUILD_DIR}/main ${SRC_DIR}/*c
+
+run:
+	./build/main || true
+
+test: setup
+
+-include ${TEST_MAKEFILE}
