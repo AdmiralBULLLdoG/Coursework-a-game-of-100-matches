@@ -1,6 +1,6 @@
 CC ?= gcc
 #Change CMOCK_DIR to real cmock path
-export CMOCK_DIR ?= /home/danil/CMock2/cmock/
+export CMOCK_DIR ?= ./cmock/
 export BUILD_DIR ?= ./build
 export SRC_DIR ?= ./src
 export TEST_DIR ?= ./test
@@ -11,7 +11,7 @@ OBJ_DIR = ${OBJ}
 
 default: all
 
-all: setup main test run
+all: setup main test
 
 setup: clean
 	mkdir -p ${BUILD_DIR}
