@@ -5,7 +5,7 @@
 
 void test_graphic_mode_int_1()
 {
-    char buf[255];
+    char buf[255] = {0};
 
     cio_read_Expect(buf);
     cio_read_ReturnArrayThruPtr_buf("1", 1);
@@ -16,7 +16,7 @@ void test_graphic_mode_int_1()
 
 void test_graphic_mode_int_4()
 {
-    char buf[255];
+    char buf[255] = {0};
 
     cio_read_Expect(buf);
     cio_read_ReturnArrayThruPtr_buf("4", 1);

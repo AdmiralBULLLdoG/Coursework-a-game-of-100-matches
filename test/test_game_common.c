@@ -90,15 +90,3 @@ void test_creates_game()
     TEST_ASSERT_EQUAL_CHAR_ARRAY("Qwe", res->player_one, 3);
     TEST_ASSERT_EQUAL_CHAR_ARRAY("Ewq", res->player_two, 3);
 }
-
-// void test_cio()
-// {
-//     char buf[255];
-
-//     cio_read_Expect(buf);
-//     cio_read_ReturnArrayThruPtr_buf("Qwe", 3);
-
-//     cio_read(buf);
-
-//     TEST_ASSERT_EQUAL_CHAR_ARRAY("Qwee", buf, 3);
-// }
