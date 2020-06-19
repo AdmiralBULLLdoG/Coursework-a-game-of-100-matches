@@ -8,13 +8,11 @@ void start()
 {
     char graphic_mode[255] = {0};
     int graphic_mode_int = 0;
-    printf("Выберите интерфейс, в котором желаете начать игру. Введите цифру "
-           "от 1 до 2\n");
-    printf("1. CLI(интерфейс командной строки)\n2. GUI(графический интерфейс "
-           "пользователя)\n");
+    printf("Выберите интерфейс, в котором желаете начать игру. Введите цифру.\n");
+    printf("1. CLI(интерфейс командной строки).\n");
     cio_read(graphic_mode);
     graphic_mode_int = atoi(graphic_mode);
-    while (graphic_mode_int < 1 || graphic_mode_int > 2
+    while (graphic_mode_int < 1 || graphic_mode_int > 1
            || graphic_mode_int == 0) {
         printf("\nНекорректный ввод, повторите попытку: ");
         cio_read(graphic_mode);
@@ -22,6 +20,4 @@ void start()
     }
     if (graphic_mode_int == 1)
         CLI_start();
-    // else
-    // 	GUI_start();
 }
