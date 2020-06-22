@@ -8,7 +8,7 @@ TEST_MAKEFILE = ${TEST_BUILD_DIR}/MakefileTestSupport
 
 default: all
 
-all: setup main
+all: main
 
 setup: clean
 	mkdir -p ${BUILD_DIR}
