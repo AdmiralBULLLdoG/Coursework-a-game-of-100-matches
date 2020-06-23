@@ -20,7 +20,7 @@ clean:
 main: setup
 	${CC} -Wall -o ${BUILD_DIR}/main ${SRC_DIR}/*c
 
-run: main
+run:
 	./build/main || true
 
 test: setup
